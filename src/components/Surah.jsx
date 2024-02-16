@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 function Surah() {
   const { setSearchVal, surahs, addToFavs, loading, favourites } =
     useContext(QuranServiceContext);
+
   const navigateTo = useNavigate();
   function navigate(e, s) {
     if (!e.target.classList.contains("fav-btn")) {
@@ -12,7 +13,7 @@ function Surah() {
       navigateTo("/surah/" + s.id);
     }
   }
-  if (loading) return <>Loading please wait....</>;
+  if (loading) return <><i className="fa-solid fa-spinner fa-spin"></i></>;
   return (
     <div>
       {surahs.map((s, i) => {
@@ -23,7 +24,7 @@ function Surah() {
             className="bg-green-200 shadow-lg mb-4 flex justify-between items-center flex-row-reverse p-3 rounded-lg md:w-[40rem] m-auto"
           >
             <div id="tile">
-              <li className="list-none">{s.name}</li>
+              <li className="list-none">{s.name}</li><small>{s.transliteration}</small>
             </div>
             <button
               className="fav-btn"

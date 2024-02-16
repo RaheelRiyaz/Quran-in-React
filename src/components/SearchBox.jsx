@@ -12,7 +12,7 @@ function SearchBox() {
         name=""
         id=""
         value={searchVal}
-        className="bg-gray-100 rounded-lg px-2 py-2 w-64 m-3 outline-none"
+        className="bg-gray-200 rounded-lg px-3 py-2 w-64 m-3 outline-none"
         placeholder="Search here"
       />
     </div>

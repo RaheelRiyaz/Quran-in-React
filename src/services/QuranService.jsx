@@ -47,10 +47,9 @@ export default function QuranServiceProvider({ children }) {
   }, []);
 
   const addToFavs = (s) => {
-    console.log(favourites);
     const exists = favourites.some((_) => _.id === s.id);
     if (exists) {
-      setFavourites((_) => [..._.filter((surah) => surah.id !== s.id)]);
+      setFavourites((_) => _.filter((surah) => surah.id !== s.id));
     } else {
       setFavourites((_) => [..._, s]);
     }
@@ -74,6 +73,7 @@ export default function QuranServiceProvider({ children }) {
         setLoading,
         setSearchVal,
         searchVal,
+        setFavourites
       }}
     >
       {children}
