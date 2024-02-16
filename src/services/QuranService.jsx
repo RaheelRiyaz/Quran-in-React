@@ -63,18 +63,18 @@ export default function QuranServiceProvider({ children }) {
 
   return (
     <QuranServiceContext.Provider
-      value={{
-        surahs,
-        title,
-        setSurahs,
-        favourites,
-        addToFavs,
-        loading,
-        setLoading,
-        setSearchVal,
-        searchVal,
-        setFavourites
-      }}
+    value={{
+      surahs,
+      title,
+      setSurahs,
+      favourites,
+      addToFavs,
+      loading,
+      setLoading,
+      setSearchVal,
+      searchVal,
+      setFavourites
+    }}
     >
       {children}
     </QuranServiceContext.Provider>

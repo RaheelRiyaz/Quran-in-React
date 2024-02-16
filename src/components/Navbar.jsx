@@ -6,9 +6,11 @@ function Navbar() {
   const { title, favourites } = useContext(QuranServiceContext);
   return (
     <div className="flex justify-evenly items-center mb-5">
-      <Link to='/' className="text-2xl text-green-700" >{title}</Link>
-      <Link to={'favourites'} className="ms-5">
-        <i className="fa-solid fa-heart text-green-600 text-xl"></i>{" "}
+      <Link to="/" className="text-2xl text-green-700">
+        {title}
+      </Link>
+      <Link to={"favourites"} className="ms-5">
+        <i className="fa-solid fa-heart text-green-600 text-xl"></i>
         <span className="">{favourites?.length}</span>
       </Link>
     </div>
